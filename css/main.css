@@ -3177,11 +3177,11 @@ html.no-csstransitions .hero-content {
 .s-footer {
   padding-top: 12rem;
   padding-bottom: 8rem;
-  background-color: #3b0d11;
+  background-color: #ab0614;
   font-family: "Open Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.882;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 251, 251, 0.5);
 }
 
 .s-footer a {
@@ -3222,8 +3222,8 @@ html.no-csstransitions .hero-content {
 }
 
 .footer-logo img {
-  width: 138px;
-  height: 36px;
+  width: 123px;
+  height: 101px;
 }
 
 /* -------------------------------------------------------------------
@@ -3385,7 +3385,7 @@ html.no-csstransitions .hero-content {
   padding-top: 24rem;
   padding-bottom: 8rem;
   text-align: center;
-  background-color: #121212;
+  background-color: #ab0614;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3400,7 +3400,7 @@ html.no-csstransitions .hero-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   opacity: .7;
 }
 
