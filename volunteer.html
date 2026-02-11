@@ -19,6 +19,134 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.45s;
+        }
+
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1976d2, #d32f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d32f2f, #1976d2);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ---- VOLUNTEER PAGE RESPONSIVE ---- */
+        @media screen and (max-width: 768px) {
+            .page-header h1 {
+                font-size: 3.6rem !important;
+            }
+
+            .page-header p {
+                font-size: 1.6rem !important;
+            }
+
+            .page-content[style*="padding: 12rem"] {
+                padding: 6rem 0 !important;
+            }
+
+            .page-content h2[style*="font-size: 3.2rem"] {
+                font-size: 2.4rem !important;
+            }
+
+            div[style*="padding: 3.5rem 4rem"] {
+                padding: 2.5rem 2rem !important;
+            }
+
+            div[style*="padding: 3.5rem 4rem"] p[style*="font-size: 2rem"] {
+                font-size: 1.6rem !important;
+            }
+
+            div[style*="padding: 4rem"][style*="border-radius: 20px"] {
+                padding: 2.5rem !important;
+            }
+
+            div[style*="padding: 4rem"] h2[style*="font-size: 2.6rem"] {
+                font-size: 2.2rem !important;
+            }
+
+            .hover-lift[style*="border-top: 4px"] {
+                padding: 2.5rem !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-header h1 {
+                font-size: 3rem !important;
+            }
+
+            .page-content[style*="padding: 12rem"] {
+                padding: 5rem 0 !important;
+            }
+
+            .page-content .lead {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .page-header h1 {
+                font-size: 2.6rem !important;
+            }
+
+            .page-content[style*="padding: 12rem"] {
+                padding: 4rem 0 !important;
+            }
+        }
+    </style>
+
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -77,7 +205,10 @@
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
-                <h1>Join the Team</h1>
+                <h1 class="fade-in" style="font-size: 5.5rem; font-weight: 800;">Serve With Us</h1>
+                <p class="fade-in fade-in-delay-1"
+                    style="font-size: 2rem; margin-top: 2rem; opacity: 0.9; line-height: 1.6; letter-spacing: 1px;">
+                    Discover how your unique gifts can make an eternal impact</p>
             </div>
         </div>
 
@@ -86,134 +217,182 @@
 
     <!-- page content
     ================================================== -->
-    <section class="page-content">
+    <section class="page-content" style="padding: 12rem 0;">
 
         <div class="row">
             <div class="column">
 
-                <p class="lead drop-cap">
-                    Nesciunt sit blanditiis dolor voluptatum est dignissimos et. Ut perferendis
-                    quis consequatur eos. Sed pariatur qui eum qui enim eum quam magni. Voluptatem
-                    nam quidem. Eveniet aut nulla nulla. Repellat nobis minus.
-                    Sunt et quis voluptas delectus ut soluta ipsum similique. Quia odit eos velit
-                    qui exercitationem nemo. Rerum eveniet molestiae perferendis aliquam voluptates.
-                    Soluta harum distinctio sit itaque vel ut maxime. Quos debitis magnam eveniet molestiae perferendis.
+                <p class="lead drop-cap" style="font-size: 2.2rem; line-height: 1.9; color: #555; margin-bottom: 2rem;">
+                    Here's the truth: God created you with specific talents, passions, and abilities for a reason!
+                    You're not just a seat-filler at church — you're a vital part of what God is doing. Whether you
+                    thrive behind the scenes
+                    or love being on the front lines, there's a perfect place for you to serve and grow.
                 </p>
 
-                <p>
-                    Molestias nostrum aliquid repudiandae et. Adipisci omnis dolores sint
-                    dignissimos quae deserunt recusandae mollitia ab. Sequi rem odio molestiae
-                    hic repellendus odit molestiae enim aut. Itaque omnis tenetur libero rerum
-                    vel impedit ut saepe. Aut deleniti ex omnis libero. Deleniti minus voluptatem
-                    reiciendis molestiae omnis voluptate voluptatem. In odio voluptatem error
-                    asperiores aut dolore. Deserunt ullam deleniti est aperiam.
+                <div
+                    style="background: linear-gradient(135deg, #1976d2, #1565c0); padding: 3.5rem 4rem; border-radius: 16px; color: white; text-align: center; margin: 4rem 0;">
+                    <p style="font-size: 2rem; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">
+                        "God has given each of you a gift from his great variety of spiritual gifts. Use them well to
+                        serve one another."
+                    </p>
+                    <p
+                        style="font-size: 1.5rem; opacity: 0.8; margin: 0; letter-spacing: 2px; text-transform: uppercase;">
+                        1 Peter 4:10 (NLT)</p>
+                </div>
+
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: #1a1a2e; margin-bottom: 2rem;">Ministry Groups
+                </h2>
+                <div class="section-divider" style="margin: 0 0 3rem;"></div>
+
+                <div class="row" style="margin-bottom: 6rem;">
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #1976d2;">
+                            <h3 style="color: #1976d2; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">
+                                Children's Ministry</h3>
+                            <p style="font-size: 1.5rem; color: #666; margin: 0; line-height: 1.7;">
+                                Nurturing young hearts with God's love through fun, engaging activities and
+                                age-appropriate Bible teaching.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #d32f2f;">
+                            <h3 style="color: #d32f2f; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Youth
+                                Ministry</h3>
+                            <ul
+                                style="list-style: none; font-size: 1.5rem; line-height: 2; margin-bottom: 1rem; color: #666;">
+                                <li>Junior Youth &bull; Senior Youth &bull; Young Adults</li>
+                            </ul>
+                            <p style="font-size: 1.4rem; margin: 0; color: #888;">
+                                Building a generation on fire for Jesus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #1976d2;">
+                            <h3 style="color: #1976d2; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">
+                                Women's Fellowship</h3>
+                            <p style="font-size: 1.5rem; color: #666; margin: 0; line-height: 1.7;">
+                                Empowering women to walk in purpose, faith, and sisterhood through fellowship and Bible
+                                study.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #d32f2f;">
+                            <h3 style="color: #d32f2f; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Men's
+                                Fellowship</h3>
+                            <p style="font-size: 1.5rem; color: #666; margin: 0; line-height: 1.7;">
+                                Equipping men to lead with integrity, strength, and godly character in their homes and
+                                communities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #1976d2;">
+                            <h3 style="color: #1976d2; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Widows
+                                &amp; Singles Ministry</h3>
+                            <p style="font-size: 1.5rem; color: #666; margin: 0; line-height: 1.7;">
+                                A caring community providing support, encouragement, and belonging for those in this
+                                season of life.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-4 medium-6 tab-full">
+                        <div class="hover-lift"
+                            style="background: #fff; padding: 3rem; border-radius: 16px; text-align: center; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin-bottom: 2rem; border-top: 4px solid #d32f2f;">
+                            <h3 style="color: #d32f2f; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Praise
+                                Team</h3>
+                            <p style="font-size: 1.5rem; color: #666; margin: 0; line-height: 1.7;">
+                                Leading worship and ushering hearts into God's presence through music and song.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: #1a1a2e;">Other Ways to Serve</h2>
+                <p style="font-size: 1.8rem; color: #666; margin-bottom: 3rem;">
+                    Beyond our core ministries, there are many practical ways to serve and make a difference every week!
                 </p>
-
-                <br>
-
-                <h2>Volunteer With Us Through the Following Ministries</h2>
 
                 <div class="row block-large-1-2 block-1000-full block-list">
                     <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">Ushering & Security.</h4>
+                        <h4 class="block-list__title-with-num">Ushering &amp; Hospitality</h4>
                         <p>
-                            Maxime et quam illum non. Ut sit soluta velit eos occaecati
-                            voluptatem. Provident sed nam facere unde repudiandae. Debitis
-                            molestiae officia. Harum dicta aut iure ipsam perferendis sit quo.
-                            Voluptas vitae inventore voluptatibus reiciendis. Omnis numquam
-                            iste. Nisi tempora quam facilis excepturi.
+                            Be the friendly face that welcomes people as they arrive! Help guests find seats,
+                            answer questions, and ensure everyone feels at home from the moment they walk through our
+                            doors.
                         </p>
                     </div>
                     <div class="column block-list__item">
                         <h4 class="block-list__title-with-num">
-                            Kids Church.
+                            Prayer Team
                         </h4>
                         <p>
-                            Ullam tenetur ipsa et ratione nihil doloribus harum quas
-                            cupiditate. Minus sunt sequi sed minus est qui. Rerum molestias
-                            iusto. Sapiente consectetur nihil recusandae perferendis in
-                            magni perspiciatis at. Non modi ratione. Sit quaerat eaque sint.
-                            Eius natus inventore eveniet hic architecto tempora.
+                            Stand in the gap through intercessory prayer! Join our prayer warriors who meet regularly
+                            to pray for our church, community, and nation.
                         </p>
                     </div>
                     <div class="column block-list__item">
                         <h4 class="block-list__title-with-num">
-                            Music Team.
+                            Administrative Support
                         </h4>
                         <p>
-                            Dolor minus dolorem dolorem. Exercitationem recusandae est.
-                            Non ducimus amet voluptatum reiciendis non et sit et. Repellat
-                            quae dolores voluptatem fugiat error sit voluptas possimus
-                            cupiditate. Ea itaque facilis totam esse et veniam sit.
-                            Perspiciatis corrupti dolorem fugit ut eum et quos.
+                            Use your organizational skills to help with office tasks, event planning, communication,
+                            and other behind-the-scenes work that keeps our church running smoothly.
                         </p>
                     </div>
                     <div class="column block-list__item">
                         <h4 class="block-list__title-with-num">
-                            Prayer Team.
+                            Media &amp; Technology
                         </h4>
                         <p>
-                            Aut autem voluptatem eius et et rerum aut ipsum. Impedit
-                            et expedita omnis minima veritatis. Totam praesentium
-                            praesentium quis. Sunt saepe quos quae ut ipsa asperiores.
-                            Laboriosam enim sunt distinctio voluptas iure corporis nihil
-                            reiciendis id. Et omnis qui aut ut voluptatem qui vel possimus eius.
+                            Help operate sound, lighting, video recording, or live streaming to ensure our services
+                            reach people both in-person and online.
                         </p>
                     </div>
                     <div class="column block-list__item">
                         <h4 class="block-list__title-with-num">
-                            Administrative Support.
+                            Facilities &amp; Maintenance
                         </h4>
                         <p>
-                            Iusto ab quod corporis consequatur ut quia ea. Magnam error
-                            aliquid cupiditate. Maxime dolores voluptatem ab. Reiciendis
-                            ipsa dolores consequatur illum voluptatem repudiandae neque.
-                            Eius consequatur ea hic vero sequi magnam vel beatae provident.
-                            Blanditiis quasi quia placeat pariatur in.
+                            Keep our church buildings and grounds clean, safe, and welcoming. Whether it's cleaning,
+                            repairs, gardening, or setup for events, every task matters.
                         </p>
                     </div>
                     <div class="column block-list__item">
                         <h4 class="block-list__title-with-num">
-                            Production Design.
+                            Community Outreach
                         </h4>
                         <p>
-                            Aut sequi occaecati tempora voluptas quibusdam excepturi
-                            temporibus. Accusantium et autem dolor exercitationem voluptatem
-                            architecto quidem. Eligendi accusamus eos sunt sapiente voluptate
-                            eligendi. Quidem aliquid suscipit. Velit vitae amet a aliquam
-                            possimus veritatis quia placeat pariatur.
-                        </p>
-                    </div>
-                    <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                            Technical & Stage Management.
-                        </h4>
-                        <p>
-                            Atque rerum repudiandae vel quaerat eos culpa sed modi ut.
-                            Porro accusantium alias voluptas quod. Ut repellendus odit
-                            perspiciatis dolore. Alias veritatis ducimus ratione non a.
-                            Iste omnis accusantium. Illum minus magni eveniet asperiores
-                            ipsum excepturi inventore sit eum.
-                        </p>
-                    </div>
-                    <div class="column block-list__item">
-                        <h4 class="block-list__title-with-num">
-                            Communications.
-                        </h4>
-                        <p>
-                            Est ut laboriosam aut quam facere. Tempora est sint ad repudiandae.
-                            Cupiditate velit repellat laudantium ut ut. Animi et quis.
-                            Nemo in est animi veniam amet eveniet eos repellat et. Sed maxime
-                            dolor dolorum quos molestiae quidem voluptatibus optio officiis.
-                            Aut et minus. Aut iste at velit quia omnis in.
+                            Serve our local community through compassion projects, food distribution, visiting the sick,
+                            or other practical ways to show God's love in action.
                         </p>
                     </div>
                 </div> <!-- end block-list -->
 
-                <h2>Yes, I want to Volunteer!</h2>
-                <p>
-                    Thank you for serving with us as we honor God and make disciples. Please fill-up and send the form
-                    below.
+                <div
+                    style="background: linear-gradient(135deg, #0d1b2a, #1565c0); padding: 4rem; border-radius: 20px; text-align: center; color: white; margin: 5rem 0;">
+                    <h2 style="color: white; font-size: 2.6rem; margin-bottom: 1.5rem; font-weight: 800;">Ready to Start
+                        Serving?</h2>
+                    <p
+                        style="font-size: 1.6rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2rem; color: rgba(255,255,255,0.85);">
+                        Fill out the form below and we'll connect you with the right ministry team.
+                    </p>
+                    <p style="font-size: 1.4rem; opacity: 0.7; font-style: italic;">
+                        "For we are God's handiwork, created in Christ Jesus to do good works." &mdash; Ephesians 2:10
+                    </p>
+                </div>
+
+                <h2>Yes, I Want to Volunteer!</h2>
+                <p style="font-size: 1.8rem; color: #666;">
+                    Thank you for your heart to serve! Please fill out the form below and we'll be in touch soon to help
+                    you get started.
                 </p>
 
                 <form name="volunteerForm" id="volunteerForm" class="volunteerForm" method="post" action=""

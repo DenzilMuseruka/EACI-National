@@ -13,6 +13,127 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.45s;
+        }
+
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1976d2, #d32f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d32f2f, #1976d2);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ---- ABOUT PAGE RESPONSIVE ---- */
+        @media screen and (max-width: 768px) {
+            .page-header h1 {
+                font-size: 3.6rem !important;
+            }
+
+            .page-header p {
+                font-size: 1.6rem !important;
+            }
+
+            .page-content h2[style*="font-size: 3.2rem"] {
+                font-size: 2.4rem !important;
+            }
+
+            div[style*="padding: 4rem"][style*="border-radius: 15px"] {
+                padding: 2.5rem !important;
+            }
+
+            div[style*="padding: 5rem 4rem"] {
+                padding: 3rem 2rem !important;
+            }
+
+            div[style*="padding: 5rem 4rem"] h3 {
+                font-size: 2rem !important;
+            }
+
+            .church-staff__header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-header h1 {
+                font-size: 3rem !important;
+            }
+
+            .page-content h2 {
+                font-size: 2.2rem !important;
+            }
+
+            .page-content .lead {
+                font-size: 1.8rem !important;
+            }
+
+            div[style*="padding: 4rem"][style*="border-radius: 15px"] ul {
+                font-size: 1.4rem !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .page-header h1 {
+                font-size: 2.6rem !important;
+            }
+        }
+    </style>
+
     <script src="js/modernizr.js"></script>
 
     <link rel="icon" href="favicon.ico">
@@ -56,7 +177,10 @@
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
-                <h1>We Are EACI</h1>
+                <h1 class="fade-in" style="font-size: 5.5rem; font-weight: 800;">Our Story</h1>
+                <p class="fade-in fade-in-delay-1"
+                    style="font-size: 2rem; margin-top: 2rem; opacity: 0.9; line-height: 1.6; letter-spacing: 1px;">Get
+                    to know the heart of EACI and the leaders who serve our community</p>
             </div>
         </div>
     </section>
@@ -66,13 +190,11 @@
         <div class="row">
             <div class="column">
 
-                <p class="lead drop-cap">
-                    Evangelical Assemblies of Christ International (EACI) is a Christ-centered,
-                    Bible-believing fellowship committed to the proclamation of the Gospel of
-                    Jesus Christ and the advancement of God’s Kingdom across nations. Rooted in
-                    the authority of Scripture and empowered by the Holy Spirit, we exist to
-                    evangelize the lost, disciple believers, and raise servant leaders who live
-                    out their faith with purpose, obedience, and love for God.
+                <p class="lead drop-cap" style="font-size: 2.2rem; line-height: 1.9; color: #555;">
+                    EACI (Evangelical Assemblies of Christ International) is a family of believers who simply love Jesus
+                    and want to share His love with everyone we meet.
+                    We're not perfect — just forgiven. We're not experts — just learners. But we're committed to
+                    following Christ together and making a real difference in our world.
                 </p>
 
                 <div class="row">
@@ -113,7 +235,181 @@
                     <cite>John 3:16–17 (ESV)</cite>
                 </blockquote>
 
-                <h2>Meet Our Leadership.</h2>
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: #1a1a2e;">Leadership Structure</h2>
+
+                <div style="background: #f8f9fb; padding: 4rem; border-radius: 20px; margin-bottom: 5rem;">
+                    <h3
+                        style="text-align: center; margin-bottom: 3rem; color: #1a1a2e; font-size: 2.4rem; font-weight: 700;">
+                        Governance Framework</h3>
+                    <div class="section-divider" style="margin-bottom: 3rem;"></div>
+                    <div class="row">
+                        <div class="column large-4 medium-full">
+                            <div class="hover-lift"
+                                style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 4px solid #1976d2; box-shadow: 0 4px 20px rgba(0,0,0,0.06); height: 100%; margin-bottom: 2rem;">
+                                <h4 style="color: #1976d2; margin-bottom: 1rem; font-size: 1.7rem; font-weight: 700;">
+                                    National Conference</h4>
+                                <p style="font-size: 1.5rem; line-height: 1.7; margin: 0; color: #666;">
+                                    Our highest decision-making body, gathering every 2 years to seek God's direction
+                                    and set the course for our fellowship's future.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column large-4 medium-full">
+                            <div class="hover-lift"
+                                style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 4px solid #d32f2f; box-shadow: 0 4px 20px rgba(0,0,0,0.06); height: 100%; margin-bottom: 2rem;">
+                                <h4 style="color: #d32f2f; margin-bottom: 1rem; font-size: 1.7rem; font-weight: 700;">
+                                    National Council</h4>
+                                <p style="font-size: 1.5rem; line-height: 1.7; margin: 0; color: #666;">
+                                    Elected servant-leaders who oversee day-to-day operations and administrative
+                                    functions, ensuring our mission stays on track.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column large-4 medium-full">
+                            <div class="hover-lift"
+                                style="background: white; padding: 2.5rem; border-radius: 16px; border-left: 4px solid #1976d2; box-shadow: 0 4px 20px rgba(0,0,0,0.06); height: 100%; margin-bottom: 2rem;">
+                                <h4 style="color: #1976d2; margin-bottom: 1rem; font-size: 1.7rem; font-weight: 700;">
+                                    Apostolic Advisory Board</h4>
+                                <p style="font-size: 1.5rem; line-height: 1.7; margin: 0; color: #666;">
+                                    Seasoned spiritual leaders providing apostolic wisdom, elected every 2 years to
+                                    assist our General Overseer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: #1a1a2e;">District Overseers</h2>
+                <p style="font-size: 1.6rem; margin-bottom: 3rem; color: #888;">Faithful shepherds overseeing ministries
+                    across our districts</p>
+
+                <div class="row" style="margin-bottom: 6rem;">
+                    <div class="column large-6 medium-full">
+                        <div class="hover-lift"
+                            style="background: linear-gradient(135deg, #1976d2, #1565c0); padding: 3rem; border-radius: 16px; color: white; margin-bottom: 2rem;">
+                            <h3 style="color: white; font-size: 2rem; margin-bottom: 0.8rem; font-weight: 700;">GO
+                                Apostle Makombe</h3>
+                            <p style="font-size: 1.5rem; opacity: 0.9; line-height: 1.6; margin: 0;">
+                                General Overseer &amp; Southern District Overseer
+                            </p>
+                        </div>
+                        <div class="hover-lift"
+                            style="background: #f8f9fb; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                            <h3 style="color: #1976d2; font-size: 2rem; margin-bottom: 0.8rem; font-weight: 700;">DGO
+                                Pastor Sango</h3>
+                            <p style="font-size: 1.5rem; color: #666; line-height: 1.6; margin: 0;">
+                                Deputy General Overseer &amp; Northern District Overseer
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column large-6 medium-full">
+                        <div class="hover-lift"
+                            style="background: #f8f9fb; padding: 3rem; border-radius: 16px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                            <h3 style="color: #d32f2f; font-size: 2rem; margin-bottom: 0.8rem; font-weight: 700;">
+                                Overseer Kamusoka</h3>
+                            <p style="font-size: 1.5rem; color: #666; line-height: 1.6; margin: 0;">
+                                Western District Overseer
+                            </p>
+                        </div>
+                        <div class="hover-lift"
+                            style="background: #f8f9fb; padding: 3rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                            <h3 style="color: #d32f2f; font-size: 2rem; margin-bottom: 0.8rem; font-weight: 700;">
+                                Overseer Mbona</h3>
+                            <p style="font-size: 1.5rem; color: #666; line-height: 1.6; margin: 0;">
+                                Eastern District Overseer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Our Dedicated Pastors</h2>
+                <p style="font-size: 1.8rem; margin-bottom: 3rem; color: #666;">These faithful servants of God shepherd
+                    our congregations with love, wisdom, and devotion.</p>
+
+                <div
+                    style="background-color: #f8f9fa; padding: 4rem; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 5rem;">
+                    <div class="row">
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.6rem; line-height: 2.2;">
+                                <li>1. Pastor Marehwa</li>
+                                <li>2. Pastor Sande</li>
+                                <li>3. Pastor Munzara</li>
+                                <li>4. Pastor Musewe</li>
+                                <li>5. Pastor Muchaka</li>
+                                <li>6. Pastor Mandipaza</li>
+                                <li>7. Pastor Mupfawa</li>
+                                <li>8. Pastor Nyarirangwe</li>
+                                <li>9. Pastor Mukombero</li>
+                                <li>10. Pastor Sengwe</li>
+                                <li>11. Pastor Nyamutaira</li>
+                                <li>12. Pastor Chidau</li>
+                                <li>13. Pastor Chimwaza</li>
+                                <li>14. Pastor Nyahanana</li>
+                                <li>15. Pastor Muguta</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.6rem; line-height: 2.2;">
+                                <li>16. Pastor Fenga</li>
+                                <li>17. Pastor Manditsera</li>
+                                <li>18. Pastor Dzobo</li>
+                                <li>19. Pastor Macheka</li>
+                                <li>20. Pastor Kaswa</li>
+                                <li>21. Pastor Sengai</li>
+                                <li>22. Pastor Marimbire</li>
+                                <li>23. Pastor Dumbura</li>
+                                <li>24. Pastor Mukoyi</li>
+                                <li>25. Pastor Dumba</li>
+                                <li>26. Pastor Munene</li>
+                                <li>27. Pastor Murahwa Snr</li>
+                                <li>28. Pastor Makwara</li>
+                                <li>29. Pastor Nyakanda</li>
+                                <li>30. Pastor Terera</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.6rem; line-height: 2.2;">
+                                <li>31. Pastor Maeka</li>
+                                <li>32. Pastor Nyahada</li>
+                                <li>33. Pastor Chayayi</li>
+                                <li>34. Pastor Madzimure</li>
+                                <li>35. Pastor Mhosva</li>
+                                <li>36. Pastor Kutsawa</li>
+                                <li>37. Pastor Murahwa Jnr</li>
+                                <li>38. Pastor Gombarume</li>
+                                <li>39. Pastor Chiwanza</li>
+                                <li>40. Pastor Gawaza</li>
+                                <li>41. Pastor Matsapa</li>
+                                <li>42. Pastor Machisa</li>
+                                <li>43. Pastor Mbwando</li>
+                                <li>44. Pastor Madziro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="font-size: 3.2rem; font-weight: 800; color: #1a1a2e;">Logos Bible School</h2>
+
+                <div
+                    style="background: linear-gradient(135deg, #0d1b2a, #1565c0); padding: 5rem 4rem; border-radius: 20px; text-align: center; color: white; margin-bottom: 4rem;">
+                    <h3 style="color: white; margin-bottom: 2rem; font-size: 2.6rem; font-weight: 800;">Equipping
+                        Believers for Ministry</h3>
+                    <p
+                        style="font-size: 1.7rem; margin-bottom: 2rem; line-height: 1.8; max-width: 700px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.9);">
+                        Deepen your understanding of Scripture and prepare for impactful ministry through comprehensive
+                        biblical training. Whether you're called to pastoral ministry or want to grow in knowledge of
+                        God's Word.
+                    </p>
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; display: inline-block; backdrop-filter: blur(10px); margin-top: 1rem;">
+                        <p style="font-size: 1.6rem; margin-bottom: 0.3rem;"><strong>Principal: Pastor Mbwando</strong>
+                        </p>
+                        <p style="font-size: 1.4rem; opacity: 0.85; margin: 0;">Experienced biblical teacher and
+                            ministry trainer</p>
+                    </div>
+                </div>
+
+                <h2>Key Leadership Bios</h2>
 
                 <div class="row block-large-1-2 block-tab-full church-staff">
 

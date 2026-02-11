@@ -20,6 +20,118 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.45s;
+        }
+
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1976d2, #d32f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d32f2f, #1976d2);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ---- CONTACT PAGE RESPONSIVE ---- */
+        @media screen and (max-width: 768px) {
+            .page-header h1 {
+                font-size: 3.6rem !important;
+            }
+
+            .page-header p {
+                font-size: 1.6rem !important;
+            }
+
+            div[style*="padding: 4rem"][style*="border-radius: 20px"] {
+                padding: 2.5rem !important;
+            }
+
+            div[style*="padding: 4rem"] h3[style*="font-size: 2.4rem"] {
+                font-size: 2rem !important;
+            }
+
+            div[style*="padding: 4rem"] ul {
+                font-size: 1.5rem !important;
+            }
+
+            .page-content h2[style*="font-size: 3.2rem"] {
+                font-size: 2.4rem !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-header h1 {
+                font-size: 3rem !important;
+            }
+
+            div[style*="padding: 4rem"][style*="border-radius: 20px"] {
+                padding: 2rem !important;
+            }
+
+            div[style*="padding: 4rem"] ul {
+                font-size: 1.4rem !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .page-header h1 {
+                font-size: 2.6rem !important;
+            }
+        }
+    </style>
+
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -78,7 +190,10 @@
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
-                <h1>Contact Us</h1>
+                <h1 class="fade-in" style="font-size: 5.5rem; font-weight: 800;">Find Us</h1>
+                <p class="fade-in fade-in-delay-1"
+                    style="font-size: 2rem; margin-top: 2rem; opacity: 0.9; line-height: 1.6; letter-spacing: 1px;">We
+                    have assemblies across the nation. Visit us today.</p>
             </div>
         </div>
 
@@ -93,23 +208,112 @@
             <div class="column">
 
                 <p class="lead drop-cap">
-                    Corrupti voluptas sed possimus odio cupiditate. Ut id nemo doloremque
-                    iusto voluptates placeat esse ut. Voluptatem saepe aut vel ut. Perferendis
-                    hic voluptates quibusdam animi quis est itaque. Atque delectus praesentium
-                    voluptas voluptas. Odio voluptatem facilis magni magnam quas aut quasi.
+                    EACI is blessed to have assemblies throughout the country where you can experience the love of
+                    Christ
+                    and grow in your faith. Whether you're in the Southern or Western region, we'd love to welcome you
+                    home!
                 </p>
 
-                <p>
-                    Nam est quae harum doloribus illum consequatur cupiditate quod rem. Error
-                    qui culpa. Porro cupiditate veniam assumenda nostrum eius. Tempore rerum eos.
-                    Est perferendis nesciunt corrupti quia sunt reprehenderit id autem.
-                    Quis in voluptates perspiciatis. Voluptatem saepe aut vel ut reprehenderit id
-                    perferendis.
+                <p style="font-size: 1.8rem; color: #666;">
+                    Each of our assemblies is a unique community united by one mission: sharing the Gospel and making
+                    disciples.
+                    Find the location nearest you and come visit us this Sunday!
                 </p>
+
+                <br>
+
+                <h2 style="font-size: 3.2rem; color: #1a1a2e; margin-bottom: 3rem; font-weight: 800;">Our Assemblies
+                </h2>
+
+                <!-- Southern District -->
+                <div
+                    style="background: linear-gradient(135deg, #1976d2, #1565c0); padding: 4rem; border-radius: 20px; color: white; margin-bottom: 4rem;">
+                    <h3
+                        style="font-size: 2.4rem; color: white; margin-bottom: 1.5rem; text-align: center; font-weight: 700;">
+                        Southern District <span style="opacity: 0.7; font-weight: 400;">&mdash; 20 Assemblies</span>
+                    </h3>
+                    <p style="font-size: 1.5rem; text-align: center; margin-bottom: 3rem; opacity: 0.8;">
+                        GO Apostle Prince Makombe &amp; DGO Pastor M. Sango
+                    </p>
+
+                    <div class="row">
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ House of Glory</li>
+                                <li>✓ Peniel Assembly</li>
+                                <li>✓ Abundant Life</li>
+                                <li>✓ Rhema Center</li>
+                                <li>✓ Living Word</li>
+                                <li>✓ Transfiguration</li>
+                                <li>✓ Bethel Assembly</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ Unfolding Mysteries</li>
+                                <li>✓ Elshaddai</li>
+                                <li>✓ Fountain of Life</li>
+                                <li>✓ New Life Assembly</li>
+                                <li>✓ Valley of Barracah</li>
+                                <li>✓ Matura Assembly</li>
+                                <li>✓ Cornerstone</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ Musharu</li>
+                                <li>✓ Nzvenga</li>
+                                <li>✓ Bezel Bridge</li>
+                                <li>✓ Maputo</li>
+                                <li>✓ Mercy City</li>
+                                <li>✓ Antioch</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Western District -->
+                <div
+                    style="background: linear-gradient(135deg, #d32f2f, #b71c1c); padding: 4rem; border-radius: 20px; color: white; margin-bottom: 4rem;">
+                    <h3
+                        style="font-size: 2.4rem; color: white; margin-bottom: 1.5rem; text-align: center; font-weight: 700;">
+                        Western District <span style="opacity: 0.7; font-weight: 400;">&mdash; 12 Assemblies</span>
+                    </h3>
+                    <p style="font-size: 1.5rem; text-align: center; margin-bottom: 3rem; opacity: 0.8;">
+                        Overseer M. Kamusoka &amp; Overseer E. Mbona
+                    </p>
+
+                    <div class="row">
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ Fountain of Grace</li>
+                                <li>✓ Amazing Grace</li>
+                                <li>✓ Bread of Life</li>
+                                <li>✓ True Vine</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ Word of Life</li>
+                                <li>✓ Chendambuya</li>
+                                <li>✓ Ruura</li>
+                                <li>✓ Miracle Centre</li>
+                            </ul>
+                        </div>
+                        <div class="column large-4 medium-6 tab-full">
+                            <ul style="list-style: none; font-size: 1.7rem; line-height: 2.2; padding: 0;">
+                                <li>✓ House of Prayer</li>
+                                <li>✓ Bindura</li>
+                                <li>✓ Victory Family Center</li>
+                                <li>✓ Tandi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="column large-6 tab-full">
-                        <h3>Main Office.</h3>
+                        <h3>Contact Information</h3>
                         <p>
                             1600 Amphitheatre Parkway<br>
                             Mountain View, CA 94043 US<br>

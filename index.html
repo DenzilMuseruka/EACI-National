@@ -6,8 +6,9 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>EACI</title>
-    <meta name="description" content="">
+    <title>Welcome Home | EACI - Evangelical Assemblies of Christ International</title>
+    <meta name="description"
+        content="Welcome to EACI! Discover a warm, loving church family where you can worship, grow, and belong. Join us this Sunday at an assembly near you.">
     <meta name="author" content="denzil museruka">
 
     <!-- mobile specific metas
@@ -16,8 +17,106 @@
 
     <!-- CSS
     ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.15s;
+            opacity: 0;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.45s;
+            opacity: 0;
+        }
+
+        /* Card hover effects */
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #1976d2, #d32f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Section divider */
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d32f2f, #1976d2);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Glass morphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* ---- INDEX PAGE RESPONSIVE ---- */
+        @media screen and (max-width: 768px) {
+            .hero-content__buttons {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 1rem !important;
+            }
+
+            .hero-content__buttons .btn {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .hero-content {
+                padding: 0 2rem !important;
+            }
+        }
+    </style>
 
     <!-- script
     ================================================== -->
@@ -85,14 +184,26 @@
         <div class="row hero-content">
 
             <div class="column large-full hero-content__text">
-                <h1>
-                    A Global Fellowship <br>
-                    Proclaiming Christ <br>
-                    And Making Disciples
+                <h1 class="fade-in"
+                    style="font-size: 6.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em;">
+                    Evangelical Assemblies of Christ International.
                 </h1>
-                <div class="hero-content__buttons">
-                    <a href="events.html" class="btn btn--stroke">Upcoming Events</a>
-                    <a href="about.html" class="btn btn--stroke">About Us</a>
+                <p class="fade-in fade-in-delay-1"
+                    style="font-size: 2.4rem; margin-bottom: 2rem; color: rgba(255,255,255,0.9); max-width: 750px; font-weight: 300; line-height: 1.6;">
+                    EACI is a community where faith is real, friendships run deep, and everyone belongs.
+                    No matter where you are in life — there's a place for you here.
+                </p>
+                <p class="fade-in fade-in-delay-2"
+                    style="font-size: 1.6rem; margin-bottom: 4rem; color: rgba(255,255,255,0.6); max-width: 600px; text-transform: uppercase; letter-spacing: 3px; font-weight: 500;">
+                    Evangelical Assemblies of Christ International.
+                </p>
+                <div class="hero-content__buttons fade-in fade-in-delay-3">
+                    <a href="#visit" class="btn btn--stroke glass"
+                        style="font-size: 1.4rem; border-radius: 50px; letter-spacing: 3px;">Plan
+                        Your Visit</a>
+                    <a href="#about" class="btn btn--stroke glass"
+                        style="font-size: 1.4rem; border-radius: 50px; letter-spacing: 3px;">About
+                        Us</a>
                 </div>
             </div> <!-- end hero-content__text -->
 
@@ -122,97 +233,219 @@
 
     <!-- about
     ================================================== -->
-    <section id="about" class="s-about">
+    <section id="about" class="s-about" style="padding: 2rem 0; background: #ffffff;">
 
         <div class="row row-y-center about-content">
 
             <div class="column large-half medium-full">
-                <h3 class="subhead">Welcome to EACI</h3>
-                <p class="lead">
-                    Evangelical Assemblies of Christ International (EACI) is a Christ-centered
-                    evangelical and Pentecostal fellowship committed to proclaiming the gospel,
-                    making disciples, and planting assemblies across nations. Our mission is
-                    to unite believers, strengthen communities, and empower individuals to live
-                    in faith, service, and devotion to Christ.
+                <h3 class="subhead"
+                    style="color: #d32f2f; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem; font-weight: 700;">
+                    About Our Church</h3>
+                <h2
+                    style="font-size: 4.2rem; line-height: 1.2; margin-bottom: 2.5rem; color: #1a1a2e; font-weight: 800;">
+                    A Place Where<br><span class="gradient-text">Everyone Belongs</span></h2>
+                <p style="font-size: 1.8rem; line-height: 1.9; color: #555; margin-bottom: 2rem;">
+                    EACI is where everyday people come together to follow Jesus. We're parents, friends, and neighbors
+                    supporting each other through life's journey and loving our communities.
                 </p>
-                <a href="about.html" class="btn btn--primary btn--about">Learn More About Us</a>
+                <p style="font-size: 1.8rem; line-height: 1.9; color: #555; margin-bottom: 3rem;">
+                    Whether you're curious about faith or looking for a church home —
+                    you're welcome here. No pretense. Just genuine people seeking God together.
+                </p>
+
+                <div style="display: flex; gap: 2rem; margin: 3rem 0;">
+                    <div class="hover-lift"
+                        style="flex: 1; padding: 2.5rem; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #1976d2;">
+                        <h4
+                            style="color: #1976d2; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            Mission</h4>
+                        <p style="font-size: 1.5rem; line-height: 1.7; color: #666; margin: 0;">
+                            Share Jesus' love and make disciples everywhere we go
+                        </p>
+                    </div>
+                    <div class="hover-lift"
+                        style="flex: 1; padding: 2.5rem; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #d32f2f;">
+                        <h4
+                            style="color: #d32f2f; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            Vision</h4>
+                        <p style="font-size: 1.5rem; line-height: 1.7; color: #666; margin: 0;">
+                            Prepare hearts for Christ's return through authentic faith
+                        </p>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn--primary"
+                    style="border-radius: 50px; font-size: 1.3rem; margin-top: 2rem; letter-spacing: 2px;">Meet
+                    Our Team →</a>
             </div>
 
 
-            <div class="column large-half medium-full">
-                <ul class="about-sched">
-                    <li>
-                        <h4>Main Church Service</h4>
-                        <p>
-                            Sunday - 8:00 AM | 10:30 AM | 5:00 PM <br>
-                            <a style="color: blue;"> Available at your nearest EACI assembly.</a>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Kids Ministry</h4>
-                        <p>
-                            Sunday - 10:30 AM <br>
-                            <a style="color: blue;"> Available at your nearest EACI assembly.</a>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Prayer & Fellowship Meeting</h4>
-                        <p>
-                            Wednesday - 7:00 PM <br>
-                            <a style="color: blue;"> Available at your nearest EACI assembly.</a>
-                        </p>
-                    </li>
-                </ul> <!-- end about-sched-->
+            <div class="column large-half medium-full" id="visit">
+                <div class="hover-lift"
+                    style="background: #fff; padding: 4rem; border-radius: 20px; box-shadow: 0 8px 40px rgba(0,0,0,0.08);">
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h3 style="color: #1a1a2e; font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem;">Service
+                            Times</h3>
+                        <p
+                            style="font-size: 1.5rem; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                            Join us this week</p>
+                    </div>
+
+                    <div
+                        style="background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%); padding: 2.2rem 2.5rem; border-radius: 14px; margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <h4 style="color: white; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700;">
+                                    Sunday Service</h4>
+                                <p style="font-size: 1.4rem; color: rgba(255,255,255,0.8); margin: 0;">Worship &amp;
+                                    teaching</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="font-size: 1.6rem; color: white; margin: 0; font-weight: 600;">8:00 AM</p>
+                                <p style="font-size: 1.6rem; color: white; margin: 0; font-weight: 600;">10:30 AM</p>
+                                <p style="font-size: 1.6rem; color: white; margin: 0; font-weight: 600;">5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #f8f9fb; border-radius: 14px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <h4 style="color: #d32f2f; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700;">
+                                    Kids Church</h4>
+                                <p style="font-size: 1.4rem; color: #888; margin: 0;">Age-specific programs</p>
+                            </div>
+                            <p style="font-size: 1.6rem; color: #333; margin: 0; font-weight: 600;">Sun 10:30 AM</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #f8f9fb; border-radius: 14px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <h4 style="color: #1976d2; font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 700;">
+                                    Prayer Night</h4>
+                                <p style="font-size: 1.4rem; color: #888; margin: 0;">Midweek encouragement</p>
+                            </div>
+                            <p style="font-size: 1.6rem; color: #333; margin: 0; font-weight: 600;">Wed 7:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="text-align: center; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid #eee;">
+                        <a href="contact.html"
+                            style="display: inline-block; color: #1976d2; font-size: 1.5rem; font-weight: 600; text-decoration: none; letter-spacing: 1px;">Find
+                            your nearest assembly &rarr;</a>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
 
 
         </div> <!-- end about-content -->
 
     </section> <!-- end s-about -->
 
-
     <!-- connect
     ================================================== -->
-    <section class="s-connect">
+    <section class="s-connect" style="background: #f8f9fb; padding: 2rem 0;">
+
+        <div class="row" style="margin-bottom: 5rem;">
+            <div class="column large-full" style="text-align: center;">
+                <h3 class="subhead"
+                    style="color: #d32f2f; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem; font-weight: 700;">
+                    Get Involved</h3>
+                <h2 style="font-size: 4.2rem; color: #1a1a2e; margin-bottom: 2rem; font-weight: 800;">Find Your Place in
+                    <span class="gradient-text">Our Community</span>
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+        </div>
 
         <div class="row connect-content">
             <div class="column large-half tab-full">
-                <h3 class="display-1">Serve With Us.</h3>
-                <p>
-                    At Evangelical Assemblies of Christ International, we believe that every
-                    believer is called to serve. Through our local assemblies and global
-                    initiatives, volunteers play a vital role in advancing the work of the
-                    Gospel, strengthening communities, and supporting ministry across nations.
-                    There is a place for you to serve and make an eternal impact.
-                </p>
-
-                <a href="volunteer.html" class="btn btn--primary h-full-width">Get Involved</a>
+                <div class="hover-lift"
+                    style="background: #fff; padding: 4rem; padding-top: 12px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); height: 100%; border-top: 4px solid #d32f2f;">
+                    <h3 style="font-size: 2.6rem; color: #1a1a2e; margin-bottom: 2rem; font-weight: 800;">Serve With
+                        Your Gifts</h3>
+                    <p style="font-size: 1.7rem; line-height: 1.9; color: #555; margin-bottom: 2rem;">
+                        Whether you love working with kids, enjoy greeting people, or have a heart for worship — there's
+                        a perfect spot for you on our team.
+                    </p>
+                    <p
+                        style="font-size: 1.5rem; color: #999; font-style: italic; margin-bottom: 3rem; border-left: 3px solid #eee; padding-left: 1.5rem;">
+                        "God gave each of you a gift. Use it to help others." — 1 Peter 4:10
+                    </p>
+                    <a href="volunteer.html" class="btn btn--primary h-full-width"
+                        style="border-radius: 50px;font-size: 1.4rem; background: linear-gradient(135deg, #d32f2f, #b71c1c); border: none; letter-spacing: 2px;">Explore
+                        Ministry Teams &rarr;</a>
+                </div>
             </div>
 
             <div class="column large-half tab-full">
-                <h3 class="display-1">Join a Connect Group.</h3>
-                <p>
-                    Connect Groups are the heart of fellowship at EACI. They provide a place
-                    for believers to grow in faith, study the Word, pray together, and build
-                    meaningful relationships beyond the main worship services. Join a Connect
-                    Group near you and experience life together in Christ.
-                </p>
-
-                <a href="connect-group.html" class="btn btn--primary h-full-width">Find a Connect Group</a>
+                <div class="hover-lift"
+                    style="background: #fff; padding: 4rem; padding-top: 12px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); height: 100%; border-top: 4px solid #1976d2;">
+                    <h3 style="font-size: 2.6rem; color: #1a1a2e; margin-bottom: 2rem; font-weight: 800;">Join a Small
+                        Group</h3>
+                    <p style="font-size: 1.7rem; line-height: 1.9; color: #555; margin-bottom: 2rem;">
+                        Our Connect Groups are where you'll find real friendships, honest conversations, and people who
+                        genuinely care about your journey.
+                    </p>
+                    <p
+                        style="font-size: 1.5rem; color: #999; font-style: italic; margin-bottom: 3rem; border-left: 3px solid #eee; padding-left: 1.5rem;">
+                        "They met together and shared everything they had." — Acts 2:44
+                    </p>
+                    <a href="connect-group.html" class="btn btn--primary h-full-width"
+                        style="border-radius: 50px; font-size: 1.4rem; background: linear-gradient(135deg, #1976d2, #1565c0); border: none; letter-spacing: 2px;">Find
+                        Your Group &rarr;</a>
+                </div>
             </div>
-        </div> <!-- end connect-content  -->
-
+        </div>
     </section> <!-- end s-connect -->
-    <!-- end s-connect -->
+
+
+    <!-- assemblies teaser
+    ================================================== -->
+    <section class="s-about" id="assemblies"
+        style="background: linear-gradient(135deg, #0d1b2a 0%, #1565c0 50%, #1976d2 100%); padding: 10rem 0;">
+
+        <div class="row">
+            <div class="column" style="text-align: center;">
+                <h3
+                    style="color: rgba(255,255,255,0.6); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem; font-weight: 600;">
+                    Our Reach</h3>
+                <h2 style="color: white; font-size: 4.2rem; margin-bottom: 2rem; font-weight: 800;">30+ Assemblies
+                    Nationwide</h2>
+                <p
+                    style="font-size: 1.8rem; color: rgba(255,255,255,0.85); max-width: 700px; margin: 0 auto 4rem; line-height: 1.8;">
+                    Each assembly is a welcoming community with authentic worship, solid teaching, and genuine
+                    friendships.
+                </p>
+                <a href="contact.html#assemblies" class="btn btn--stroke glass"
+                    style="font-size: 1.4rem; padding: 1.8rem 4rem; border-radius: 50px; letter-spacing: 3px;">
+                    Find Your Assembly &rarr;
+                </a>
+            </div>
+        </div>
+
+    </section> <!-- end assemblies -->
 
 
     <!-- events
-================================================== -->
-    <section class="s-events">
+    ================================================== -->
+    <section class="s-events" style="background: #ffffff; padding: 12rem 0;">
 
         <div class="row events-header">
-            <div class="column">
-                <h2 class="subhead">Upcoming Events</h2>
+            <div class="column" style="text-align: center; margin-bottom: 5rem;">
+                <h3 class="subhead"
+                    style="color: #d32f2f; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem; font-weight: 700;">
+                    Upcoming Events</h3>
+                <h2 style="font-size: 4.2rem; color: #1a1a2e; margin-bottom: 2rem; font-weight: 800;">What's <span
+                        class="gradient-text">Happening</span></h2>
+                <div class="section-divider"></div>
+                <p style="font-size: 1.8rem; color: #666; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    From family camps to youth gatherings — events where faith comes alive.
+                </p>
             </div>
         </div>
 
@@ -361,6 +594,86 @@
         </div> <!-- end social-content -->
 
     </section> <!-- end s-social -->
+
+
+    <!-- First Time Visitor
+    ================================================== -->
+    <section style="background: #f8f9fb; padding: 10rem 0;">
+
+        <div class="row" style="margin-bottom: 5rem;">
+            <div class="column large-full" style="text-align: center;">
+                <h3 class="subhead"
+                    style="color: #d32f2f; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 2rem; font-weight: 700;">
+                    New Here?</h3>
+                <h2 style="color: #1a1a2e; font-size: 4.2rem; margin-bottom: 2rem; font-weight: 800;">
+                    What to <span class="gradient-text">Expect</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p style="font-size: 1.8rem; max-width: 700px; margin: 0 auto; line-height: 1.8; color: #666;">
+                    We know trying a new church can feel uncertain. Here's what to expect so you can relax and be
+                    yourself.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column large-4 medium-full">
+                <div class="hover-lift"
+                    style="background: #fff; padding: 3.5rem 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #d32f2f, #b71c1c); display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                        <span style="color: white; font-size: 2.4rem; font-weight: 800;">1</span>
+                    </div>
+                    <h4 style="color: #1a1a2e; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Come As You
+                        Are</h4>
+                    <p style="font-size: 1.6rem; line-height: 1.8; color: #666;">
+                        Jeans and a t-shirt? Perfect. Dress clothes? Also great. We care more about your heart than your
+                        outfit.
+                    </p>
+                </div>
+            </div>
+            <div class="column large-4 medium-full">
+                <div class="hover-lift"
+                    style="background: #fff; padding: 3.5rem 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #1976d2, #1565c0); display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                        <span style="color: white; font-size: 2.4rem; font-weight: 800;">2</span>
+                    </div>
+                    <h4 style="color: #1a1a2e; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">90-Minute
+                        Service</h4>
+                    <p style="font-size: 1.6rem; line-height: 1.8; color: #666;">
+                        Uplifting worship, a practical message, and friendly people. Arrive 10 minutes early to grab a
+                        seat. Kids programs run at the same time.
+                    </p>
+                </div>
+            </div>
+            <div class="column large-4 medium-full">
+                <div class="hover-lift"
+                    style="background: #fff; padding: 3.5rem 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem; height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                    <div
+                        style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #d32f2f, #b71c1c); display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                        <span style="color: white; font-size: 2.4rem; font-weight: 800;">3</span>
+                    </div>
+                    <h4 style="color: #1a1a2e; font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700;">Warm Welcome
+                    </h4>
+                    <p style="font-size: 1.6rem; line-height: 1.8; color: #666;">
+                        Our greeters will help you find a seat, show you around, and answer any questions. No pressure —
+                        just a warm welcome.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 4rem;">
+            <div class="column large-full" style="text-align: center;">
+                <a href="contact.html" class="btn btn--primary"
+                    style="border-radius: 50px; padding: 1.6rem 4rem; font-size: 1.4rem; letter-spacing: 2px; background: linear-gradient(135deg, #d32f2f, #b71c1c);">
+                    Let Us Know You're Coming &rarr;
+                </a>
+            </div>
+        </div>
+
+    </section> <!-- end first time visitor -->
 
 
     <!-- footer

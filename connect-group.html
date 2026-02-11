@@ -19,6 +19,94 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            animation-delay: 0.15s;
+        }
+
+        .fade-in-delay-2 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-delay-3 {
+            animation-delay: 0.45s;
+        }
+
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1976d2, #d32f2f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d32f2f, #1976d2);
+            border-radius: 2px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ---- CONNECT GROUP PAGE RESPONSIVE ---- */
+        @media screen and (max-width: 768px) {
+            .page-header h1 {
+                font-size: 3.6rem !important;
+            }
+
+            .page-header p {
+                font-size: 1.6rem !important;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-header h1 {
+                font-size: 3rem !important;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .page-header h1 {
+                font-size: 2.6rem !important;
+            }
+        }
+    </style>
+
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -77,7 +165,10 @@
         <div class="gradient-overlay"></div>
         <div class="row page-header__content">
             <div class="column">
-                <h1>Connect Groups</h1>
+                <h1 class="fade-in" style="font-size: 5.5rem; font-weight: 800;">Connect Groups</h1>
+                <p class="fade-in fade-in-delay-1"
+                    style="font-size: 2rem; margin-top: 2rem; opacity: 0.9; line-height: 1.6; letter-spacing: 1px;">Life
+                    is better together</p>
             </div>
         </div>
 
